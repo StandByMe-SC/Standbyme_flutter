@@ -1,0 +1,18 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'dart:io';
+
+/// Key for accessing the access token.
+const ACESS_TOKEN_KEY =
+    'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFlYzU4NjcwNGNhOTZiZDcwMzZiMmYwZDI4MGY5NDlmM2E5NzZkMzgiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoi64Ko6raB7Zic66-8IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xNaHAzUXh1SHc2Y1FjX19MUFNETkczVEdrS0NxS19vazZTWU5aOTVvdTh3PXM5Ni1jIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL3N0YW5kYnltZS01ZDg1NiIsImF1ZCI6InN0YW5kYnltZS01ZDg1NiIsImF1dGhfdGltZSI6MTcwODQzNDQxOSwidXNlcl9pZCI6IkozUkhSTUNhQXFRVU11aUdwTUlEUDRESHhXNDIiLCJzdWIiOiJKM1JIUk1DYUFxUVVNdWlHcE1JRFA0REh4VzQyIiwiaWF0IjoxNzA4NDM0NDE5LCJleHAiOjE3MDg0MzgwMTksImVtYWlsIjoibmcwNDAxMTVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTUwNjE4MjM4Nzg4ODAyMzc4MDYiXSwiZW1haWwiOlsibmcwNDAxMTVAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.lvubTMZpSl0r0B-G7TNRdOcfV1L5KVtXevJUUpceArJLzW67FbYGK3kTx1OkvPNq9pvDstdpzvZ_EOayLS0WXz-60PjuxUimpsI5nKmVP_9B23CRi3WDYdH0ns6N79XzzbOg8lT9zrUBOitXPIPo3jPnTTX7giNjvylGhtiKFDOffIERa4hsTj6KtpJ-OtQoW6NGVf8hQELVt3dDas97-W5gUNlsrAOaOk4y4npGNoBllhQjC0fPWTrE-Dq5J_6JY24RU2TJyhXR7hSCjLHFy2kSdcKL31Ji4f-7OFbmM_SSUYB-tOubTGsX6by1zjcevqvPiaROxW35CFDgr8FPHw';
+
+/// Key for accessing the refresh token.
+const REFRESH_TOKEN_KEY = 'REFRESH_TOKEN';
+
+/// Instance of FlutterSecureStorage for storing sensitive data.
+const storage = FlutterSecureStorage();
+
+/// IP address for server communication based on platform (emulator or simulator).
+const emulatorIP = '10.0.2.2:3000';
+const simulatorIP = '127.0.2.2:3000';
+
+final ip = Platform.isIOS ? simulatorIP : emulatorIP;
